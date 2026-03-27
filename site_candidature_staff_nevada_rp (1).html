@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Candidature STAFF - NevadaRP</title>
+
+  <!-- PARTICLES JS -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+  <style>
+    body {
+      font-family: Arial;
+      background:#0f172a;
+      color:white;
+      margin:0;
+      position:relative;
+      overflow-x:hidden;
+    }
+
+    /* BACKGROUND IMAGE */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('nevadav2.png') no-repeat center center/cover;
+      opacity: 0.5;
+      z-index: -2;
+    }
+
+    /* PARTICLES */
+    #particles-js {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    /* BANNER */
+    .banner {
+      text-align:center;
+      padding:60px 20px;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.7), transparent);
+    }
+
+    .banner h1 {
+      font-size:50px;
+      margin:0;
+      color:#38bdf8;
+      text-shadow: 0 0 20px #38bdf8;
+    }
+
+    .banner p {
+      margin-top:10px;
+      font-size:18px;
+      opacity:0.8;
+    }
+
+    .container {
+      max-width:800px;
+      margin:auto;
+      padding:20px;
+    }
+
+    h1 {
+      text-align:center;
+      color:#38bdf8;
+    }
+
+    form {
+      background: rgba(30,41,59,0.7);
+      backdrop-filter: blur(10px);
+      padding:20px;
+      border-radius:15px;
+      box-shadow: 0 0 30px rgba(56,189,248,0.3);
+    }
+
+    label { display:block; margin-top:15px; }
+
+    input, textarea, select {
+      width:100%;
+      padding:10px;
+      margin-top:5px;
+      border-radius:5px;
+      border:none;
+      background:#0f172a;
+      color:white;
+    }
+
+    button {
+      margin-top:20px;
+      padding:12px;
+      width:100%;
+      background:#38bdf8;
+      border:none;
+      border-radius:5px;
+      font-size:16px;
+      cursor:pointer;
+      box-shadow: 0 0 15px #38bdf8;
+    }
+
+    button:hover {
+      background:#0ea5e9;
+      box-shadow: 0 0 25px #0ea5e9;
+    }
+
+    .conditions {
+      background: rgba(17,24,39,0.7);
+      backdrop-filter: blur(8px);
+      padding:15px;
+      border-radius:10px;
+      margin-bottom:20px;
+    }
+  </style>
+</head>
+<body>
+
+<div id="particles-js"></div>
+
+<div class="banner">
+  <h1>Nevada Roleplay</h1>
+  <p>Candidature STAFF - Rejoins l'équipe 🔥</p>
+</div>
+
+<div class="container">
+
+  <div class="conditions">
+    <h3>⛔ CONDITIONS DE RECRUTEMENT :</h3>
+    <ul>
+      <li>17 ans minimum</li>
+      <li>Actif sur le serveur</li>
+      <li>Respectueux, mature et sérieux</li>
+      <li>Bonne orthographe</li>
+      <li>Respect du règlement</li>
+      <li>Travail en équipe</li>
+      <li>Aucune sanction grave</li>
+      <li>Gestion de conflit</li>
+      <li>Très disponible</li>
+      <li>Expérience modération</li>
+    </ul>
+  </div>
+
+  <form id="form">
+    <label>Email *</label>
+    <input type="email" id="email" required>
+
+    <label>Pseudo Discord *</label>
+    <input type="text" id="discord" required>
+
+    <label>ID Discord *</label>
+    <input type="text" id="discordId" required>
+
+    <label>ID Unique IG *</label>
+    <input type="text" id="ig" required>
+
+    <label>Présentation *</label>
+    <textarea id="presentation" required></textarea>
+
+    <label>Ancienneté serveur *</label>
+    <textarea id="anciennete" required></textarea>
+
+    <label>RP actuel *</label>
+    <textarea id="rp" required></textarea>
+
+    <label>Sanctions ?</label>
+    <select id="sanction">
+      <option>Non</option>
+      <option>Oui</option>
+    </select>
+
+    <label>Si oui lesquelles</label>
+    <textarea id="sanctionDetails"></textarea>
+
+    <label>Motivations *</label>
+    <textarea id="motivations" required></textarea>
+
+    <label>Heures FiveM *</label>
+    <input type="text" id="hours" required>
+
+    <label>Disponibilités *</label>
+    <textarea id="dispo" required></textarea>
+
+    <label>Ambitions *</label>
+    <textarea id="ambitions" required></textarea>
+
+    <label>Points positifs/négatifs *</label>
+    <textarea id="points" required></textarea>
+
+    <label>Expérience modération *</label>
+    <textarea id="experience" required></textarea>
+
+    <label>Pourquoi vous ? *</label>
+    <textarea id="why" required></textarea>
+
+    <label>Respect hiérarchie ?</label>
+    <select id="hierarchie">
+      <option>Oui</option>
+      <option>Non</option>
+    </select>
+
+    <label>Acceptez-vous de ne plus RP ?</label>
+    <select id="rpStop">
+      <option>J'accepte</option>
+      <option>Je n'accepte pas</option>
+    </select>
+
+    <label>Quelque chose à ajouter</label>
+    <textarea id="extra"></textarea>
+
+    <button type="submit">Envoyer la candidature</button>
+  </form>
+</div>
+
+<script>
+/* PARTICLES CONFIG */
+particlesJS("particles-js", {
+  particles: {
+    number: { value: 80 },
+    size: { value: 3 },
+    move: { speed: 1 },
+    line_linked: { enable: true },
+  }
+});
+
+const webhookURL = "https://discord.com/api/webhooks/1480952907317772562/3BJJ0_Rwat5mIRM6zuTzdQPZOUQF9V3LPomoQC2CZ8QpytdapY0Km2I7rSy0GXWGDnxW";
+
+document.getElementById("form").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const data = {
+    content: "📩 **Nouvelle candidature STAFF**",
+    embeds: [{
+      title: "Candidature NevadaRP",
+      color: 3447003,
+      fields: [
+        { name: "Email", value: document.getElementById("email").value },
+        { name: "Discord", value: document.getElementById("discord").value },
+        { name: "ID Discord", value: document.getElementById("discordId").value },
+        { name: "ID IG", value: document.getElementById("ig").value },
+        { name: "Présentation", value: document.getElementById("presentation").value },
+        { name: "Ancienneté", value: document.getElementById("anciennete").value },
+        { name: "RP", value: document.getElementById("rp").value },
+        { name: "Sanctions", value: document.getElementById("sanction").value },
+        { name: "Détails sanctions", value: document.getElementById("sanctionDetails").value || "Aucune" },
+        { name: "Motivations", value: document.getElementById("motivations").value },
+        { name: "Heures FiveM", value: document.getElementById("hours").value },
+        { name: "Disponibilités", value: document.getElementById("dispo").value },
+        { name: "Ambitions", value: document.getElementById("ambitions").value },
+        { name: "Points", value: document.getElementById("points").value },
+        { name: "Expérience", value: document.getElementById("experience").value },
+        { name: "Pourquoi lui", value: document.getElementById("why").value },
+        { name: "Hiérarchie", value: document.getElementById("hierarchie").value },
+        { name: "Stop RP", value: document.getElementById("rpStop").value },
+        { name: "Extra", value: document.getElementById("extra").value || "Rien" }
+      ]
+    }]
+  };
+
+  fetch(webhookURL, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data)
+  })
+  .then(() => {
+    alert("Candidature envoyée avec succès !");
+    document.getElementById("form").reset();
+  })
+  .catch(() => alert("Erreur lors de l'envoi."));
+});
+</script>
+
+</body>
+</html>
